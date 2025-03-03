@@ -1,0 +1,18 @@
+# Define the default target
+all: program
+
+# Build the final executable
+program: program.o encode128.o
+	gcc -m32 -Wall -g -no-pie -o program program.o encode128.o
+
+# Compile the C source file into an object file
+program.o: program.c
+	gcc -m32 -Wall -g -c program.c -o program.o
+
+# Assemble the assembly file into an object file
+encode128.o: encode128.asm
+	nasm -f elf32 encode128.asm -o encode128.o
+
+# Clean up generated files
+clean:
+	rm -f *.o program
