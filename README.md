@@ -50,3 +50,6 @@ The generated barcode will be saved as output.bmp in the current directory.
 ⚡ Example Output
 Input: "HELLO123"
 Output: A barcode representation of "HELLO123" saved as output.bmp
+This project is open-source and available under the MIT License.
+
+
